@@ -35,7 +35,7 @@ app.use(function(req,res,next){
   res.locals.isAuthenticated = req.isAuthenticated();
   res.locals.currentUser = req.user;
   next();
-})
+});
 
 // Routes
 app.use("/", require("./routes/home"));
@@ -43,7 +43,7 @@ app.use("/posts", require("./routes/posts"));
 app.use("/users", require("./routes/users"));
 
 // Port setting
-var port = 3000
+var port = 3000;
 app.listen(port, function(){
   console.log("server on! http://localhost:"+port);
 });
